@@ -104,18 +104,22 @@ public with sharing class ClassesObjectsMethods {
      * @return The number of vowels in the string.
      */
     public static Integer countVowels(String str) {
-        // Initialize the result Integer
+       Integer count = 0; // Initialize the result Integer
 
-        /*
-        for () {
+        
+        for (Integer i = 0; i < str.length(); i++) {
+            String ch = str.substring (i, i+1);
+            if (ch == 'a' || ch == 'e' || ch =='i' || ch =='o' || ch =='u') {
+                count++;
+            }
+        }
             // get individual characters from the string - hint use substring or split
             // check if the character is a vowel
             // if it is a vowel, increment the result Integer
-        }
-        */
-
-        return null; // Replace null with the variable you used to store the result
+        
+        return count; // Replace null with the variable you used to store the result
     }
+
 
     /**
      * Question 5
