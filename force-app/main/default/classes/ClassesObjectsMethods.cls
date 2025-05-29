@@ -132,18 +132,27 @@ public with sharing class ClassesObjectsMethods {
         // The list of scientists' names
         List<String> scientistNames = new List<String>{'Tim Berners-Lee', 'Alan Turing', 'Grace Hopper', 'Donald Knuth', 'Guido van Rossum', 'Ken Thompson', 'Stephen Hawking'};
 
-        // The variable to store the concatenated string
+        String result = ''; // The variable to store the concatenated string
 
-        // Loop through the list of scientists' names
+    // Loop through the list of scientists' names
+    for (String name : scientistNames) {
+        // If the name doesn't contain the letter 'G', skip this iteration
+        if (!name.toLowerCase().contains('g')) {
+            continue;
+        }
 
-            // If the name doesn't contain the letter 'G', skip this iteration
-
-            // Add the name to the result string, followed by a comma
-
-        // Remove the last comma from the result string
-
-        return null; // Replace null with the variable you used to store the result
+        // Add the name to the result string, followed by a comma
+        result += name + ',';
     }
+
+    // Remove the last comma from the result string
+    if (result.endsWith(',')) {
+        result = result.substring(0, result.length() - 1);
+    }
+
+    return result; // Replace null with the variable you used to store the result
+}
+
 
     /**
      * Question 6
@@ -162,6 +171,7 @@ public with sharing class ClassesObjectsMethods {
         return null; // Replace null with the variable you used to store the result
     }
 
+
     /**
      * Question 7
      * Generate a random number between 50 and 100
@@ -174,6 +184,7 @@ public with sharing class ClassesObjectsMethods {
         // Return the random integer
         return null; // Replace null with the variable you used to store the result
     }
+
 
     /**
      * Question 8
