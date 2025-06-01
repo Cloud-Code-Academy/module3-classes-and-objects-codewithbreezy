@@ -196,12 +196,12 @@ public with sharing class ClassesObjectsMethods {
      * @return The current date in the current user locale format.
      */
     public static String getCurrentDate() {
-        // Get the todays date
+        Date today = Date.today();// Get the todays date
 
-        // Format the current date
+        String formattedDate = today.format();// Format the current date
 
         // Return the result
-        return null; // Replace null with the variable you used to store the result
+        return formattedDate; // Replace null with the variable you used to store the result
     }
 
     /**
