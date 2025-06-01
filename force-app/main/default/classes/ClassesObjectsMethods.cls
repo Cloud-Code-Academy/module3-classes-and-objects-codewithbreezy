@@ -261,19 +261,21 @@ public with sharing class ClassesObjectsMethods {
      */
     public class Book {
         // Declare three public instance variables - title, author, pages
-        // title
-        // author
-        // pages
+       public String title; // title
+        public String author;// author
+       public String pages; // pages
     
-        // Book constructor to initialize the title and author
-        public Book() {
+       // Book constructor to initialize the title and author
+        public Book(String title, String author) {
             // Initialize the title and author
+            this.title = title;
+            this.author = author;
         }
     
         // Method that returns the details of the book
         public String getBookDetails() {
             // return A string containing the details of the book in the format "Title: <title>, Author: <author>"
-            return null; // Replace null with the variable you used to store the result
+            return 'Title: ' + this.title + ', Author: ' + this.author; // Replace null with the variable you used to store the result
         }
     }
     
@@ -285,12 +287,12 @@ public with sharing class ClassesObjectsMethods {
      * @return A string containing the details of the book.
      */
     public static String createAndGetBookDetails() {
-        // Create a Book object with title "A Brief History of Time" and author "Stephen Hawking"
+       Book b = new Book('A Brief History of Time' , 'Stephen Hawking'); // Create a Book object with title "A Brief History of Time" and author "Stephen Hawking"
 
-        // Call the getBookDetails method on the book object to get the details of the book
+       String details = b.getBookDetails(); // Call the getBookDetails method on the book object to get the details of the book
 
         // Return the details of the book
-        return null; // Replace null with the variable you used to store the result
+        return details; // Replace null with the variable you used to store the result
     }
 
     /**
