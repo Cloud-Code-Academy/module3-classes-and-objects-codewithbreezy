@@ -180,10 +180,12 @@ public with sharing class ClassesObjectsMethods {
      * @return A integer between 50 and 100.
      */
     public static Integer generateRandomNumber() {
+        Integer randomNum = Math.round(Math.random() * (100-50) + 50);
+        
         // Use Math class to generate number between 50 and 100
 
         // Return the random integer
-        return null; // Replace null with the variable you used to store the result
+        return randomNum; // Replace null with the variable you used to store the result
     }
 
 
